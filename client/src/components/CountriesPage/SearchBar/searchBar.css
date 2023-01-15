@@ -62,6 +62,7 @@
     font-family: var(--titles-font-family);
     font-size: 24px;
     color: var(--3details-color);
+    cursor: pointer;
 }
 
 .clearFilters:hover{

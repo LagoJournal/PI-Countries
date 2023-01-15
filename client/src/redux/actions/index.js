@@ -138,3 +138,12 @@ export const clearActivityError = () => {
     });
   };
 };
+
+export const popUpError = (payload) => {
+  return function (dispatch) {
+    dispatch({
+      type: ACTIVITY_ERROR,
+      payload,
+    });
+  };
+};

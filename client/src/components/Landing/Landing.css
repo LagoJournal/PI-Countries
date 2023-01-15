@@ -26,6 +26,7 @@
     width: 148px;
     box-shadow: 2px 2px;
     font-weight: 600;
+    cursor: pointer;
 }
 .button:hover{
     color: var(--2details-color);

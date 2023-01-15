@@ -73,7 +73,8 @@ const ActivityCreationPage = () => {
       ]);
       document.getElementById("countriesInputForm").value = "";
     } else {
-      alert("Country not Found");
+      dispatch(actions.popUpError("Country already added or not found"));
+      dispatch(actions.displayPopUp());
       document.getElementById("countriesInputForm").value = "";
     }
   };
@@ -126,7 +127,7 @@ const ActivityCreationPage = () => {
   return (
     <>
       <Popup text={success} />
-      <div className={displayPopUp[0] ? "blur" : undefined}>
+      <div className={displayPopUp[0] && "blur"}>
         <div className="arrowContainer">
           <Link className="backArrow" to="/countries">
             <svg
