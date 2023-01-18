@@ -10,6 +10,7 @@ export default function CountriesPage() {
 
   useEffect(() => {
     dispatch(actions.getCountries());
+    dispatch(actions.clearDetails());
   }, [dispatch]);
 
   return (

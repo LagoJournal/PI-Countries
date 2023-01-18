@@ -9,6 +9,7 @@ import {
   DELETE_COUNTRY_CARD,
   DISPLAY_POPUP,
   ACTIVITY_ERROR,
+  CLEAR_DETAILS,
 } from "../actions";
 
 const initialState = {
@@ -138,6 +139,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         activityError: action.payload,
+      };
+    case CLEAR_DETAILS:
+      return {
+        ...state,
+        countryDetails: [],
       };
     default:
       return initialState;

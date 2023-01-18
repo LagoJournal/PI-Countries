@@ -11,6 +11,7 @@ export const ADD_COUNTRY_CARD = "ADD_COUNTRY_CARD";
 export const DELETE_COUNTRY_CARD = "DELETE_COUNTRY_CARD";
 export const DISPLAY_POPUP = "DISPLAY_POPUP";
 export const ACTIVITY_ERROR = "ACTIVITY_ERROR";
+export const CLEAR_DETAILS = "CLEAR_DETAILS";
 
 export const getCountryName = (name) => {
   return function (dispatch) {
@@ -144,6 +145,14 @@ export const popUpError = (payload) => {
     dispatch({
       type: ACTIVITY_ERROR,
       payload,
+    });
+  };
+};
+
+export const clearDetails = () => {
+  return function (dispatch) {
+    dispatch({
+      type: CLEAR_DETAILS,
     });
   };
 };

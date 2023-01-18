@@ -31,6 +31,7 @@ const ActivityCreationPage = () => {
 
   useEffect(() => {
     dispatch(actions.getCountries());
+    dispatch(actions.clearDetails());
   }, [dispatch]);
 
   const handleChange = (event) => {
