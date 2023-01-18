@@ -14,7 +14,7 @@ const Popup = (props) => {
   if (displayPopUp[0]) {
     if (activityError !== "") {
       return (
-        <>
+        <div className="errorBackground">
           <div className="externalPUContainerE">
             <div className="internalPUContainerE">
               <div className="errorsPopUp">
@@ -28,7 +28,7 @@ const Popup = (props) => {
               </button>
             </div>
           </div>
-        </>
+        </div>
       );
     } else {
       return (

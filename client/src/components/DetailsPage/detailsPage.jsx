@@ -73,39 +73,52 @@ const DetailsPage = () => {
         </Link>
       </div>
       <div className="detailsCard">
-        <div className="nameFlag">
-          <div className="nameContainer">
-            <p className="detailsCode">{id}</p>
-            <p className="detailsName">{name && name.toUpperCase()}</p>
-          </div>
-          <img src={flag_img} className="detailsFlag" alt="flag" />
-        </div>
-        <div className="detailsStats">
-          <div className="internalContainer">
-            <div className="internalDetails">
-              <p className="detailsTitles">Capital.</p>
-              <p className="detailsStatsText">{capital}</p>
-            </div>
-            <div className="internalDetails">
-              <p className="detailsTitles">Continent.</p>
-              <p className="detailsStatsText"> {continent}</p>
-            </div>
-            <div className="internalDetails">
-              <p className="detailsTitles">SubRegion.</p>
-              <p className="detailsStatsText"> {subregion}</p>
+        {!id ? (
+          <div className="loading">
+            <div class="lds-square">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
           </div>
-          <div className="internalContainer">
-            <div className="internalDetails">
-              <p className="detailsTitles">Area.</p>
-              <p className="detailsStatsText"> {area} km2</p>
+        ) : (
+          <div>
+            <div className="nameFlag">
+              <div className="nameContainer">
+                <p className="detailsCode">{id}</p>
+                <p className="detailsName">{name && name.toUpperCase()}</p>
+              </div>
+              <img src={flag_img} className="detailsFlag" alt="flag" />
             </div>
-            <div className="internalDetails">
-              <p className="detailsTitles">Population.</p>
-              <p className="detailsStatsText"> {population}</p>
+            <div className="detailsStats">
+              <div className="internalContainer">
+                <div className="internalDetails">
+                  <p className="detailsTitles">Capital.</p>
+                  <p className="detailsStatsText">{capital}</p>
+                </div>
+                <div className="internalDetails">
+                  <p className="detailsTitles">Continent.</p>
+                  <p className="detailsStatsText"> {continent}</p>
+                </div>
+                <div className="internalDetails">
+                  <p className="detailsTitles">SubRegion.</p>
+                  <p className="detailsStatsText"> {subregion}</p>
+                </div>
+              </div>
+              <div className="internalContainer">
+                <div className="internalDetails">
+                  <p className="detailsTitles">Area.</p>
+                  <p className="detailsStatsText"> {area} km2</p>
+                </div>
+                <div className="internalDetails">
+                  <p className="detailsTitles">Population.</p>
+                  <p className="detailsStatsText"> {population}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
       <div className="activitiesList">
         <div className="activitiesHeader">

@@ -128,6 +128,7 @@ const ActivityCreationPage = () => {
   return (
     <>
       <Popup text={success} />
+
       <div className={displayPopUp[0] && "blur"}>
         <div className="arrowContainer">
           <Link className="backArrow" to="/countries">
